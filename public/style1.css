@@ -1,0 +1,35 @@
+body {
+  background-color: #000000; /* black */
+  color: #ffffff; /* white text for contrast */
+}
+nav{
+    background-color: #8ada72;
+    color: #080808;
+    padding: 40px 70px;
+    display: flex;
+    font-style: italic;
+    font-size: 2rem;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+    nav li{
+        list-style: none;
+    }
+
+    nav li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 12px;
+    }
+
+    nav li a:hover{
+        color: aqua;
+        text-decoration: none;
+    }
