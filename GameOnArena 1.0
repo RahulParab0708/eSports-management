@@ -23,7 +23,7 @@
       <input type="text" placeholder="Username" required>
       <div class="password-wrapper">
         <input type="password" id="password" placeholder="Password" required>
-        <span id="togglePassword">👁️</span>
+        <span id="togglePassword"></span>
       </div>
       <button type="submit">Log In</button>
       <div class="error" style="display: none;">Invalid username or password</div>
@@ -38,7 +38,7 @@
     togglePassword.addEventListener("click", function () {
       const type = passwordInput.type === "password" ? "text" : "password";
       passwordInput.type = type;
-      this.textContent = type === "password" ? "👁️" : "🙈";
+      this.textContent = type === "password" ?;
     });
   </script>
 </body>
