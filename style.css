@@ -73,3 +73,32 @@ button:hover {
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
+/* Navigation background image */
+nav {
+  background-image: url('https://as2.ftcdn.net/jpg/14/92/29/89/1000_F_1492298974_qyxy2aS2XjoasTS08S9zWt5GLmo3w3Nh.webp');
+  background-size: cover; /* Ensure the image covers the entire nav */
+  background-position: center; /* Center the background image */
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+nav li {
+  font-size: 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Add a slight hover effect */
+}
