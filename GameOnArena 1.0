@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>GameOnArena 1.0</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page with Navigation</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Form -->
   <div class="login-container">
-    <h2>Esports Management Login</h2>
-    <form id="loginForm">
-      <input type="email" id="email" placeholder="Email" required />
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
       <div class="password-wrapper">
-        <input type="password" id="password" placeholder="Password" required />
-        <span id="togglePassword"></span>
+        <input type="password" id="password" placeholder="Password" required>
+        <span id="togglePassword">👁️</span>
       </div>
-      <button type="submit">Login</button>
-      <p class="error" id="errorMsg"></p>
+      <button type="submit">Log In</button>
+      <div class="error" style="display: none;">Invalid username or password</div>
     </form>
   </div>
+
+  <script>
+    // Toggle password visibility
+    const togglePassword = document.querySelector("#togglePassword");
+    const passwordInput = document.querySelector("#password");
+
+    togglePassword.addEventListener("click", function () {
+      const type = passwordInput.type === "password" ? "text" : "password";
+      passwordInput.type = type;
+      this.textContent = type === "password" ? "👁️" : "🙈";
+    });
+  </script>
 </body>
 </html>
