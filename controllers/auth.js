@@ -1,13 +1,7 @@
-const db = require("./controllers/db");
+const db = require("./db"); // import the single db instance
+const bcrypt = require("bcryptjs"); // make sure bcrypt is imported
 
-const db = mysql.createConnection({
-  host: process.env.DATABASE_HOST,
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE,
-});
-
-exports.register = (req, res) => {
+exports.register = async (req, res) => {
   console.log(req.body);
 
   const { Name, Email, Password, PasswordConfirm } = req.body;
@@ -23,11 +17,11 @@ exports.register = (req, res) => {
 
       if (results && results.length > 0) {
         return res.render("register", {
-          message: "That Email has already been taken* ",
+          message: "That Email has already been taken*",
         });
       } else if (Password !== PasswordConfirm) {
         return res.render("register", {
-          message: "Passwords do not match* ",
+          message: "Passwords do not match*",
         });
       }
 
