@@ -1,4 +1,4 @@
-const db = require("../controllers/db");
+const db = require("./controllers/db");
 
 const db = mysql.createConnection({
   host: process.env.DATABASE_HOST,
