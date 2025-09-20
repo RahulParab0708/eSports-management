@@ -38,11 +38,7 @@ db.connect((error) => {
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
 
-const PORT = process.env.PORT || 5001;
-app.get("/",(req,res) =>{
-    res.send("Hello from render")
-})
-
-app.listen(PORT, () => {
-    console.log("Server started on port 5001");
-})
+const port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running on port ${port}`);
+});
